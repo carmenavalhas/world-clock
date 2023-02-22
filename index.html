@@ -5,14 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/fb6fedba3f.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Manrope&family=Mynerve&family=Space+Mono&family=Tenor+Sans&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.37/moment-timezone-with-data-1970-2030.min.js"></script>
 
     <title>World Clock - Carmen Navalhas</title>
   </head>
   <body>
-    <div class="container">
-      <a href="/" id="goback"><h1>World Clock</h1></a>
+    <button class="theme-button">
+      Dark Mode <i class="fa-solid fa-moon"></i>
+    </button>
+
+    <div class="container" id="container-button">
+      <a href="/" id="goback"
+        ><h1>World Clock <i class="fa-solid fa-earth-americas"></i></h1
+      ></a>
 
       <select id="city">
         <option value="">Select a city...</option>
@@ -38,6 +58,7 @@
           </div>
           <div class="time"></div>
         </div>
+
         <div>
           <div class="city" id="lisbon">
             <div>
@@ -46,13 +67,25 @@
             </div>
             <div class="time"></div>
           </div>
+
+          <div class="city" id="auckland">
+            <div>
+              <h2>Auckland 🇳🇿</h2>
+              <div class="date"></div>
+            </div>
+            <div class="time"></div>
+          </div>
         </div>
       </div>
     </div>
     <footer>
-      This project was coded with 💜 by <strong>Carmen Navalhas</strong> and it
-      is
-      <a href="https://github.com/carmenavalhas/world-clock" target="_blank">
+      This project was coded with <i class="fa-solid fa-heart"></i> by
+      <strong>Carmen Navalhas</strong> and it is
+      <a
+        href="https://github.com/carmenavalhas/world-clock"
+        target="_blank"
+        id="github"
+      >
         open sourced on GitHub</a
       >
     </footer>

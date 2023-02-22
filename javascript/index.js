@@ -27,7 +27,7 @@ TokyoTimeElement.innerHTML = TokyoTime.format(
 );
 
 }
-}
+
 
 // Lisbon
 let LisbonElement = document.querySelector("#lisbon");
@@ -41,6 +41,21 @@ LisbonDateElement.innerHTML = moment().format("MMMM Do YYYY");
 LisbonTimeElement.innerHTML = LisbonTime.format(
 "h:mm:ss [<small>]A[</small>]"
 );
+}
+// Auckland
+let AucklandElement = document.querySelector("#auckland");
+if (AucklandElement) {
+let AucklandDateElement = AucklandElement.querySelector(".date");
+let AucklandTimeElement = AucklandElement.querySelector(".time");
+let AucklandTime = moment().tz("Pacific/Auckland");
+
+
+AucklandDateElement.innerHTML = moment().format("MMMM Do YYYY");
+AucklandTimeElement.innerHTML = AucklandTime.format(
+"h:mm:ss [<small>]A[</small>]"
+);
+}
+
 }
 
 function updateCity(event) {
@@ -67,3 +82,19 @@ setInterval(updateTime, 1000);
 
 let citiesSelectElement = document.querySelector("#city");
 citiesSelectElement.addEventListener("change", updateCity);
+
+  function changeTheme() {
+        let body = document.querySelector("body");
+
+        // body.classList.toggle("dark");
+
+        if (body.classList.contains("dark")) {
+          body.classList.remove("dark");
+          button.innerHTML = "Dark Mode ☾";
+        } else {
+          body.classList.add("dark");
+          button.innerHTML = "Light Mode ☀";
+        }
+      }
+      let button = document.querySelector("button");
+      button.addEventListener("click", changeTheme);
