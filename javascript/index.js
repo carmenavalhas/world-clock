@@ -74,6 +74,7 @@ function updateCity(event) {
           </div>
           <div class="time">${cityTime.format("h:mm:ss")} <small>${cityTime.format("A")}</small></div>
         </div>
+        <a href="index.html">Go back <i class="fa-solid fa-arrow-left"></i></a>
         `;
 }
 
@@ -90,10 +91,10 @@ citiesSelectElement.addEventListener("change", updateCity);
 
         if (body.classList.contains("dark")) {
           body.classList.remove("dark");
-          button.innerHTML = "Dark Mode ☾";
+          button.innerHTML = `Dark Mode <i class="fa-solid fa-moon"></i>`;
         } else {
           body.classList.add("dark");
-          button.innerHTML = "Light Mode ☀";
+          button.innerHTML = `Light Mode <i class="fa-solid fa-sun"></i>`;
         }
       }
       let button = document.querySelector("button");

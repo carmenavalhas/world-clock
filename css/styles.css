@@ -25,10 +25,19 @@ select {
   display: block;
   width: 100%;
   border-radius: 15px;
-  padding: 5px;
+  padding: 10px;
   font-family: 'Space Mono', monospace;
-  font-size: 13px;
+  font-size: 12.5px;
   background: #EBDABE;
+  height: 40px;
+  border: none;
+  box-shadow: 0 5px 8px grey;
+}
+
+select:focus {
+  background-color: #E2CAA4;
+  color: grey;
+  font-size: 13px;
 }
 
 .dark select {
@@ -76,8 +85,9 @@ border-radius: 20px;
 
 .date {
   opacity: 0.7;
-  font-size: 14px;
-  font-family: 'Cutive Mono', monospace;}
+  font-size: 13px;
+  font-family: 'Space Mono', monospace;
+}
 
 .time {
   font-size: 22px;
